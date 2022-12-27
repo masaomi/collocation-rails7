@@ -1,0 +1,37 @@
+<script>
+$(document).ready(function () {
+    $('#example').DataTable();
+});  
+</script>
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Jobs</h1>
+
+<div id="jobs">
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>PID</th>
+                <th>Status</th>
+                <th>Command</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        <% @jobs.reverse.each do |job| %>
+          <tr style="text-align: center;">
+            <td><%= job.id %></td>
+            <td><%= job.job_id %></td>
+            <td><%= job.status %></td>
+            <td><%= job.command %></td>
+            <td><%= link_to job.link, "job/result/#{job.id}" %></td>
+          </tr>
+        <% end %>
+        </tbody>
+</table>
+</div>
+
+

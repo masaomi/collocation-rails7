@@ -1,0 +1,11 @@
+<h1>BCCWJ words collocation</h1>
+
+<p>Input two words and click submit button</p>
+<%= form_tag('/jobs/run', method: :post) do %> 
+  Word1:<input type="text" name="word1"> 
+  Word2:<input type="text" name="word2"> 
+  <input type="submit" value="submit"> 
+<% end %>
+
+<br>
+<%= link_to "Job list", "/jobs" %>

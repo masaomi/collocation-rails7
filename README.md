@@ -16,6 +16,7 @@
 2. コーパスデータベース
  * 実行には「わかち書き」されたコーパスデータベースが必要です
  * 下記のdockerコマンドを実行するディレクトリにshare/corpus.txtというファイル名で配置してください
+ * share_exmpleにwikiコーパスのサンプルを置いておきました
 
 ### 2. Download the Docker image
 

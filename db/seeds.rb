@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+wakachi_txt = "share/corpus.txt"
+open(wakachi_txt) do |f|
+  while line=f.gets
+    Corpu.create(line: line.chomp)
+  end
+end
+
+ 

@@ -2,7 +2,8 @@
 
 ## How to install
 
-必要なもの (Requirements)
+### 1.  必要なもの (Requirements)
+
 1. Docker (https://www.docker.com/)
  * もしDocker Engineがインストールされていなければ、インストールしてください
  * インストール方法はOSによって異なりますので、ここではインストール方法は省略します
@@ -11,14 +12,14 @@
  * 実行にはわかち書きされたコーパスデータベースが必要です
  * 下記のdockerコマンドを実行するディレクトリにshare/corpus.txtというファイル名で配置してください
 
-### 1. Download the Docker image
+### 2. Download the Docker image
 
 以下のコマンドを実行して、Docker imageをダウンロードしてください
 ```
 $ docker pull masaomi/rails
 ```
 
-### 2. Start Ruby on Rails with Docker container
+### 4. Start Ruby on Rails with Docker container
 
 以下のコマンドを実行して、Rails (Docker container) を起動してください
 ```
@@ -41,9 +42,9 @@ Note
 * Docker containerにloginするには docker exec -it collocation-rails bash でloginできます
 * ユーザーrailsのpasswordはrailsで、sudoersグループに属しているので、sudoが使えます
 
-## 3. Access test
+## 4. Access test
 
 以下のURLにブラウザでアクセスして、上で設定したUserIDとPasswordを入力して、トップページが見られたら成功です。
 * http://localhost
 
-
+![top_page](public/top_page.jpg)

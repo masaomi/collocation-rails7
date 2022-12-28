@@ -18,6 +18,12 @@
 $ docker pull masaomi/rails
 ```
 
+### 2. Basic認証用ID/Password設定
+
+環境変数を設定してBasic認証用のIDとPasswordを設定します
+```
+```
+
 ### 2. Start Ruby on Rails
 
 TODO

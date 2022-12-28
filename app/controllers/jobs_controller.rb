@@ -25,8 +25,9 @@ class JobsController < ApplicationController
     @command = "ruby scripts/count_words_calc_jaccard_plus_pmi_tscore_v4.rb share/TSV_SUW_OT_all_normalized_wakachi.txt #{word1} #{word2} > job_results/job_#{new_job_id}.txt 2>&1"
     @job.link = "job_results/job_#{new_job_id}.txt"
     @job.command = @command
-    pid = spawn("#{@command}")
-    #p pid
+    pid = spawn(@command)
+    # p pid
+    Process.detach(pid)
     @job.job_id = pid
     @job.save
   end

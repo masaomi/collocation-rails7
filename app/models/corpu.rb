@@ -1,0 +1,2 @@
+class Corpu < ApplicationRecord
+end

@@ -22,7 +22,7 @@ class JobsController < ApplicationController
     word2=params[:word2]
     new_job_id = Job.count + 1
     @job = Job.new
-    @command = "ruby scripts/count_words_calc_jaccard_plus_pmi_tscore_v4.rb share/TSV_SUW_OT_all_normalized_wakachi.txt #{word1} #{word2} > job_results/job_#{new_job_id}.txt 2>&1"
+    @command = "ruby scripts/count_words_calc_jaccard_plus_pmi_tscore_v4.rb share/corpus.txt #{word1} #{word2} > job_results/job_#{new_job_id}.txt 2>&1"
     @job.link = "job_results/job_#{new_job_id}.txt"
     @job.command = @command
     pid = spawn(@command)
